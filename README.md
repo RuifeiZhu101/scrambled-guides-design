@@ -1,7 +1,22 @@
-# scrambled_guides_design + CasOFFinder Filtering
+# scrambled_guides_design
 
 ## Project Overview
-This project aims to provide a in-house tool for scrambled guide design.
+This tool is designed to assist researchers in the field of CRISPR gene editing by providing a powerful command-line utility for designing scrambled guide RNA sequences.
+
+### Key Objectives:
+
+**Scrambled Guide Design** : Generate scrambled guide RNA sequences based on a given guide sequence.
+
+**Levenshtein Distance**: Calculate the Levenshtein distance between input guide sequences and scrambled guides for assessing their similarity.
+
+**Incorporation with Off-Target Assessment Tool**: (See Future Directions) - Plan to incorporate off-target nomination assessment.
+
+This project serves as a valuable resource for optimizing gRNA design, enhancing the precision of CRISPR-based experiments.
+
+## Authors and acknowledgment
+Author: Ruifei Zhu
+
+Project Origin: This project was initiated during my summer internship. While it hasn't reached its full potential yet, it represents a significant step towards efficient gRNA design. I would like to express my gratitude to my mentor, Wenwen H. from Excision, for her invaluable guidance and the original idea behind this project.
 
 ## Current Tool Features
 
@@ -22,7 +37,7 @@ Design desired number of scrabled guides given a working guide sequence. Current
 This will prompt a require for the input: 1. a guide sequence(string contains case-insensitive "A,C,G,T"), and 2. a intager(number of scrambled guides you want). For example:
 
 ```
-(base) ubuntu@ip-172-31-22-126:~/scrambled_guides_design$ ./run_scrambled_guides.sh 
+(base) ubuntu@ip-123:~/scrambled_guides_design$ ./run_scrambled_guides.sh 
 Enter the working guide sequence (A, C, G, T only): AAAACCCTTTGGG
 Enter the number of output guide sequences: 5
 ```
@@ -37,8 +52,4 @@ Guide 3: CTGTTGAGCACAA
 Guide 4: TCTGAGACGACAT
 ```
 ## Future directions:
-Add the feature to assess the scrambled guides regarding to thier off-target nomination result, and output the scrambled guides with the less off-target nominations.
-
-
-## Authors and acknowledgment
-Ruifei Zhu
+Expand the tool's functionality by adding the ability to assess the scrambled guides for off-target nominations. This will allow users to generate scrambled guides with fewer off-target nominations, enhancing the precision of CRISPR gene editing experiments.
